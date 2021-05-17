@@ -114,7 +114,7 @@ total_loss_r, cls_loss_r1, regr_loss_r1, offset_loss_r1 = [], [], [], []
 updata_cache = [2, 51, 101, 151]
 for epoch_num in range(s_epoch, C.num_epochs):
     # updata cache at epoch 51, 101, 151, may be not necessary
-    if (epoch_num + 1) in updata_cache:
+    if (epoch_num) in updata_cache:
         with open(cache_path_updated + str(epoch_num + 1), 'rb') as fid:
             train_data = cPickle.load(fid)
         data_gen_train = data_generators.get_data_wider_class(train_data, C, batchsize=batchsize)
