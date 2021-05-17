@@ -4,7 +4,7 @@ import time
 import cPickle
 
 import sys
-sys.path.insert(0,'.')
+sys.path.insert(0,'../')
 from keras_csp import config, bbox_process
 from keras_csp.utilsfunc import *
 from keras.utils import generic_utils
@@ -115,7 +115,7 @@ if __name__ == '__main__':
     elif part == 'wider':
         res_dataset = 'wider'
         threshold = 0.4
-        epoch = '197'
+        epoch = '198'
 
     C.scale = 'h'
     C.num_scale = 1
